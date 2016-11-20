@@ -53,9 +53,15 @@ hi SpellBad cterm=underline
 " Set font to Cousine
 "set gfn=Cousine:h13 " Not working!
 
+" Nic: remap F9 to make
+nnoremap <F9> :silent !make mdwpdf<CR>
+
 " Behave intelligently for type of file.
 filetype plugin indent on
 syntax on
+
+" Nic:
+au BufNewFile,BufRead *.mdw set filetype=pandoc
 
 " Set leader to comma.
 let mapleader = ","
